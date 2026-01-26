@@ -1,8 +1,16 @@
-const heroes = [
+export type Owner = 'DC' | 'Marvel';
+
+export interface Hero {
+    id: number;
+    name: string;
+    owner: Owner;
+}
+
+const heroes: Hero[] = [
     {
         id: 1,
         name: 'Batman',
-        owner: 'DC'
+        owner: "DC"
     },
     {
         id: 2,
@@ -27,6 +35,6 @@ const heroes = [
 ];
 
 
-export const owners = ['DC','Marvel'];
+export const owners = ['Anime','DBZ'] as const;
 
 export default heroes;
