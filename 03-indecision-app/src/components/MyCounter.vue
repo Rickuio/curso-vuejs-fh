@@ -3,8 +3,8 @@
         <h3>Counter: {{ counter }}</h3>
         <h3>Square: {{ cuadrado }}</h3>
         <div>
-            <button v-on:click="minus">-1</button>
-            <button @click="plus">+1</button>
+            <button class="p-5 bg-blue-400 rounded hover:bg-blue-600 mr-2" v-on:click="minus">-1</button>
+            <button class="p-5 bg-blue-400 rounded" @click="plus">+1</button>
         </div>
     </section>
 </template>
