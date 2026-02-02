@@ -1,5 +1,5 @@
 <template>
-    <h1>Mi primera app en Vue</h1>
+    <h1 class="text-3xl font-bold text-center mt-2">Mi primera app en Vue</h1>
     <MyCounter :initialValue=8 />
     <br><hr>
     <MyCounter :initial-value="5" />

@@ -2,9 +2,9 @@
     <section>
         <h3>Counter: {{ counter }}</h3>
         <h3>Square: {{ cuadrado }}</h3>
-        <div>
-            <button class="p-5 bg-blue-400 rounded hover:bg-blue-600 mr-2" v-on:click="minus">-1</button>
-            <button class="p-5 bg-blue-400 rounded" @click="plus">+1</button>
+        <div class="ml-2">
+            <button class="btn" v-on:click="minus">-1</button>
+            <button class="btn" @click="plus">+1</button>
         </div>
     </section>
 </template>
@@ -26,8 +26,12 @@
     const minus = () => counter.value--;
 </script>
 
-<style scoped>
+<style>
 h3 {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+@reference "tailwindcss";
+.btn {
+    @apply p-4 bg-blue-400 rounded hover:bg-blue-600 mr-2;
 }
 </style>

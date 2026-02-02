@@ -1,7 +1,7 @@
 <template>
     <section>
-        <h3>Counter: {{ counter }}</h3>
-        <h3>Square: {{ square }}</h3>
+        <h3>CounterScript: {{ counter }}</h3>
+        <h3>SquareScript: {{ square }}</h3>
         <div>
             <button v-on:click="counter--">-1</button>
             <button @click="counter++">+1</button>
