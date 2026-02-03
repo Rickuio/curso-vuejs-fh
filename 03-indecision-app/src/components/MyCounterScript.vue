@@ -2,14 +2,15 @@
     <section>
         <h3>CounterScript: {{ counter }}</h3>
         <h3>SquareScript: {{ square }}</h3>
-        <div>
-            <button v-on:click="counter--">-1</button>
-            <button @click="counter++">+1</button>
+        <div class="ml-2">
+            <button class="p-3 bg-green-400 mr-2 rounded-sm" v-on:click="counter--">-1</button>
+            <button class="p-3 bg-green-400 mr-2 rounded-2xl" @click="counter++">+1</button>
         </div>
     </section>
 </template>
 
 <script lang="ts">
+import { useCounter } from '@/composables/useCounter';
 import { computed, defineComponent, ref } from 'vue';
 
 
@@ -19,15 +20,11 @@ export default defineComponent({
         valor: { type: Number, required: true }, 
     },
     setup(props) {
-        
-        const counter = ref(props.valor);
-        const cuadrado = computed(() => counter.value * counter.value);
-        
+        const { counter, cuadrado } = useCounter(props.valor);
         return {
-            counter: counter,
-            square: cuadrado,
+            counter,
+            square: cuadrado
         }
-    
     }
    
 });

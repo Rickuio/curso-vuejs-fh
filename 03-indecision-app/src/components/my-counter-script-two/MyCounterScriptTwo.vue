@@ -2,9 +2,9 @@
     <section>
         <h3>Counter: {{ counter }}</h3>
         <h3>Square: {{ square }}</h3>
-        <div>
-            <button v-on:click="counter--">-1</button>
-            <button @click="counter++">+1</button>
+        <div class="ml-4">
+            <button class="p-3 bg-gray-400 mr-2 rounded-sm" v-on:click="counter--">-1</button>
+            <button class="p-3 bg-gray-400 mr-2 rounded-sm" @click="counter++">+1</button>
         </div>
     </section>
 </template>

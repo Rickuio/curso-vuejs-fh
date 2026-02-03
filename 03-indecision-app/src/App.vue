@@ -4,7 +4,7 @@
     <br><hr>
     <MyCounter :initial-value="5" />
     <br><hr>
-    <MyCounterScript :valor="2" />
+    <MyCounterScript :valor=2 />
     <br><hr>
     <MyCounterScript2 :valor="3" />
 </template>

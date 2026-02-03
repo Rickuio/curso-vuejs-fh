@@ -10,20 +10,31 @@
 </template>
 
 <script lang="ts" setup>
-    import { computed, ref } from 'vue';
+import { useCounter } from '@/composables/useCounter';
 
-    interface Props {
-        initialValue: number;
-        value?: string;
-    }
+interface Props {
+    initialValue: number;
+    value?: string;
+}
 
-    const props = defineProps<Props>();
+const props = defineProps<Props>();
 
-    const counter = ref(props.initialValue);
-    const cuadrado = computed( () => counter.value * counter.value );
+const { counter, cuadrado, plus, minus } = useCounter(props.initialValue);
     
-    const plus = () => counter.value++;
-    const minus = () => counter.value--;
+    // import { computed, ref } from 'vue';
+
+    // interface Props {
+    //     initialValue: number;
+    //     value?: string;
+    // }
+
+    // const props = defineProps<Props>();
+
+    // const counter = ref(props.initialValue);
+    // const cuadrado = computed( () => counter.value * counter.value );
+    
+    // const plus = () => counter.value++;
+    // const minus = () => counter.value--;
 </script>
 
 <style>
