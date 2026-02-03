@@ -1,5 +1,5 @@
 <template>
-    <section>
+    <section class="text-center">
         <h3>Counter: {{ counter }}</h3>
         <h3>Square: {{ cuadrado }}</h3>
         <div class="ml-2">

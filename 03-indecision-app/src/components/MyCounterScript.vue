@@ -1,5 +1,5 @@
 <template>
-    <section>
+    <section class="text-left">
         <h3>CounterScript: {{ counter }}</h3>
         <h3>SquareScript: {{ square }}</h3>
         <div class="ml-2">
