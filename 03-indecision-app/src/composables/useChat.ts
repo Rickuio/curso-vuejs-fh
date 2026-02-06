@@ -6,7 +6,7 @@ import { ref } from "vue";
 export const useChat = () => {
     
     
-    const messages = ref<Message[]>([
+    const dataMsg = ref<Message[]>([
         {
         id: new Date().getTime(),
         message: 'Hola1',
@@ -31,17 +31,17 @@ export const useChat = () => {
         
         if (text.length === 0) return;
         
-        messages.value.push({
+        dataMsg.value.push({
         id: new Date().getTime(),
         itsMine: true,
         message: text,
         });
 
         if (!text.endsWith('?')) return;
-        await sleep(1.5);
+        await sleep(1.1);
         // Evaluar si termina el signo de admiracion
         const { answer, image } = await getResponse(); 
-        messages.value.push({
+        dataMsg.value.push({
             id: new Date().getTime(),
             itsMine: false,
             message: answer,
@@ -52,7 +52,7 @@ export const useChat = () => {
 
     return {
         // Properties
-        messages,
+        mensajes: dataMsg,
 
         // Methods
         onMessage,
