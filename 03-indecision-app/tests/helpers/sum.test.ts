@@ -44,6 +44,3 @@ describe('Group 2: add function', () => {
     });
 
 });
-    
-    
-    
